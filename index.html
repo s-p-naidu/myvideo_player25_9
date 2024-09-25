@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube video</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <label for="input_video">upload</label>
+    <input id="input_video" type="file" accept="video/mp4,video/x-m4v,video/*" hidden>
+    <br>
+    <label for="input_folder">upload folder</label>
+    <input id="input_folder" type="file" accept="video/mp4,video/x-m4v,video/*" webkitdirectory="true" multiple>
+    <br>
+    <video id='vid'  controls>
+    </video>
+    <div id="checkbox">
+        <input type="radio" name="videomode" value="shuffle">shuffle
+        <input type="radio" name="videomode" value="loop">loop
+    </div>
+    
+   <br>
+    <div></div>
+        <span id="curtime"></span>/
+        <span id="durtime"></span>
+    </div>
+    <div>
+
+        <form id="form">
+            <label for="loop">how many times you want to loop:</label>
+            <input id="loop" type="number" min=0 max=60 onkeyup="checkform()" required>
+            <h1>from:</h1>
+        <label for="smin">min:</label><input id="smin" type="number" min=0 max=60 onkeyup="checkform()" required>
+        <label for="ssec">sec:</label><input id="ssec" type="number" min=0 max=60 onkeyup="checkform()" required>
+
+        <h1>To:</h1>
+        <label for="lmin">min:</label><input id="lmin" type="number" min=0 max=60 onkeyup="checkform()" required>
+        <label for="lsec">sec:</label><input id="lsec" type="number" min=0 max=60 onkeyup="checkform()" required><br><br>
+        </form>  
+        <button id="playbtn" disabled>start</button>
+       
+        
+    </div>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
